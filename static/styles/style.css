@@ -1,0 +1,26 @@
+.bg-color
+{
+    color: #111111;
+    background-color: #ffdcc8;
+}
+.border-color
+{
+    color: #111111;
+    background-color: #ffb68c;
+}
+.footer-color
+{
+    color: #111111;
+    background-color: #ffb68c;
+}
+.list-box
+{
+    color: #111111;
+    background-color: #ffb68c;
+    text-align: left;
+    display: inline-block;
+    list-style-type: circle;
+    height: 100px;
+    width: 150px;
+    margin-right: 50px;
+}

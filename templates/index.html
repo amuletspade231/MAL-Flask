@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- The viewport meta tag is used to control the width and scaling of the viewport -->
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <title>My Abundant Life</title>
+
+        <link href="{{ url_for('static', filename='styles/style.css')}}" rel="stylesheet"/>
+    </head>
+    <body class="bg-color">
+        <header id="header">
+            <div class="">
+                <a href="{{ url_for('index') }}" style="margin-left: 47%; padding-top: 25px; display: inline-block;">
+                <img src="static/images/cow.png"  width="100px" height="75px">
+                </a>
+                <h1 style="text-align: center;font-family:'Courier New'">Gamers Go Moo</h1>
+            </div>
+        </header>
+        <hr class="border-color" style="width:100%; height: 3px;">
+        <main>
+
+            <h3 style="text-align: center;font-family:'Courier New'">My Abundant Life: SoCal Edition</h3>
+            <p style="text-align: center;font-family:'Courier New'">My Abundant Life is a garden sim game that allows you to create an abundant, fulfilling life by growing and eating from your own sustainable garden!<br>
+              <br> What kind of garden that will flourish will depend on where you live. For now, we begin our abundant life in Southern California, USA!
+            </p>
+
+            <h3 style="text-align: center;font-family:'Courier New'">Hardiness Zone</h3>
+            <p style="text-align: center;font-family:'Courier New'"> SoCal generally sits in zone 9, which means the temperature doesn't get colder than 20-30 degrees Fahrenheit.<br>This zone is perfect for plants that thrive in warmer climates, but not so much that can't take the heat.
+            </p>
+
+            <h3 style="text-align: center;font-family:'Courier New'">Seasons</h3>
+            <p style="text-align: center;font-family:'Courier New'">The joke about SoCal only having two seasons is more real than you think! When it comes to gardening, you can merge the four seasons into the "warm" and "cool" seasons. Unlike most farming sims, the weather is warm enough to still garden even in the "coldest" days!<br>
+              <br>
+            </p>
+            
+            <div style="text-align: center;font-family:'Courier New'">
+            <img src="static/images/WarmCrops.jpg" width="250" height="250" style="position: relative;">
+            <h2 style="text-align: center;">What to Plant in the Warm Season</h2>
+            <p style="text-align: center;">Here are some plants we recommend planting in the warmer season:&nbsp;
+                <br>
+                {% if warm_plants %}
+                {{warm_plants}}
+                {% else %}
+                No plants found.
+                {% endif %}
+                <br>
+            </p>
+            </div>
+
+            <div style="text-align: center;font-family:'Courier New'">
+            <img src="static/images/CoolCrops.jpg" width="250" height="250" style="position: relative;">
+            <h2 style="text-align: center;">What to Plant in the Cool Season</h2>
+            <p style="text-align: center;">Here are some plants we recommend planting in the cooler season:&nbsp;
+                <br>
+                {% if cold_plants %}
+                {{cold_plants}}
+                {% else %}
+                No plants found.
+                {% endif %}
+                <br>
+            </p>
+            </div>
+
+            <div style="text-align: center;font-family:'Courier New'">
+                <p><a href="{{ url_for('recipe_search') }}">Check out what recipes you can make!</a></p>
+            </div>
+<!--             
+            <h2 style="text-align: center;font-family:'Courier New'">Recipes You Can Make From Your Garden</h2>
+
+            <div style="margin-left: 15%; width:16%; display: inline-block;font-family:'Courier New'"> 
+                <h3 style="text-align: center;">Winter Salad</h3>
+                <p style="text-align: center;">Ingredients: Lettuce, Onion, Beets, Broccoli</p>
+                <img src="images/summer_salad.jpeg" width="250" height="250" style="margin-left: 10%;">
+            </div>
+
+            <div style="margin-left: 15%; width:16%; display: inline-block;font-family:'Courier New'"> 
+                <h3 style="text-align: center;">Margherita Pizza</h3>
+                <p style="text-align: center;">Ingredients: Ingredients: Tomato, Basil</p>
+                <img src="images/margherita.png" width="250" height="250" style="margin-left: 10%;">
+            </div>
+
+            <div style="margin-left: 15%; width:16%; display: inline-block;font-family:'Courier New'"> 
+                <h3 style="text-align: center;">Carrot Bread</h3>
+                <p style="text-align: center;">Ingredients: Ingredients: Carrot</p>
+                <img src="images/carrot_bread.jpg" width="250" height="250" style="margin-left: 10%;">
+            </div>
+
+            <div style="margin-left: 15%; width:16%; display: inline-block;font-family:'Courier New'"> 
+                <h3 style="text-align: center;">Summer Pesto Pasta</h3>
+                <p style="text-align: center;">Ingredients: Chives, Squash</p>
+                <img src="images/pesto_pasta.jpg" width="250" height="250" style="margin-left: 10%;">
+            </div>
+
+            <div style="margin-left: 15%; width:16%; display: inline-block;font-family:'Courier New'"> 
+                <h3 style="text-align: center;">Tomato Minestrone</h3>
+                <p style="text-align: center;">Ingredients: Tomato, Beans, Pepper</p>
+                <img src="images/minestrone.jpeg" width="250" height="250" style="margin-left: 10%;">
+            </div>
+
+            <div style="margin-left: 15%; width:16%; display: inline-block;font-family:'Courier New'"> 
+                <h3 style="text-align: center;">Strawberry Salad</h3>
+                <p style="text-align: center;">Ingredients: Strawberry, Spinach</p>
+                <img src="images/strawberry_salad.jpg" width="250" height="250" style="margin-left: 10%;">
+            </div> -->
+
+            <br>
+            <br>
+        </main>
+        
+        <footer class="footer-color" style="height: 100px; width: 100%;" id="footer">
+            <p style="text-align: center; padding-top: 50px; font-family:'Courier New'">Disclaimer: Info was gathered by ChatGPT and may not be accurate.</p>
+        </footer>
+    </body>
+</html>
